@@ -1,0 +1,18 @@
+name: iotgw-hmon
+version: '1.0'
+summary: Health Monitor snap
+description: Health Monitor application
+architectures: [armhf]
+confinement: strict
+parts:
+  hmon:
+    plugin: nodejs
+    node-engine: "8.12.0"    
+    source: .
+apps:
+  hmon:
+    command: "bin/iotgw-hmon"
+    daemon: simple
+    restart-condition: always
+    plugs: [network, network-control]
+
