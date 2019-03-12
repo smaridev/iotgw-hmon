@@ -134,6 +134,7 @@ const sendHealth = (appConfig) => {
       console.log( 'CPU Usage (%): ' + v );
       const msg = JSON.stringify({
       tpid: getserial(),
+	  message: "iot-gw/healthmon/devicemon",
       timestamp: Math.round((new Date()).getTime() / 1000),
       cpu_usage: v,
       totalmem: os.totalmem(),
@@ -166,6 +167,7 @@ const sendDeviceState = (appConfig) => {
 
   const msg = JSON.stringify({
     tpid: getserial(),
+	message: "iot-gw/healthmon/deviceinfo",
     status: "online",
     timestamp: Math.round((new Date()).getTime() / 1000),
     networkdetails: os.networkInterfaces( ),
