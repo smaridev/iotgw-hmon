@@ -1,8 +1,8 @@
 name: iotgw-hmon
-version: '1.0'
+version: '1.2'
 summary: Health Monitor snap
 description: Health Monitor application
-architectures: [armhf amd64]
+architectures: [armhf]
 confinement: strict
 parts:
   hmon:
