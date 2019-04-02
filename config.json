@@ -1,6 +1,6 @@
 {
   "app": {
-    "sendInterval": 30000,
+    "sendInterval": 120000,
     "loggingLevel": "DEBUG"
   },
   "mqtt": {
